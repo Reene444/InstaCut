@@ -62,5 +62,5 @@ $ npm start
 ## Apis:
 
 ## Page 
- :dash: [Demo](http://34.71.165.227)
+ :dash: [Demo](http://instacut.org/)
 
