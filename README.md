@@ -21,10 +21,10 @@ $ mvn clean package
 $ java -jar target/backend_apis-0.0.1-SNAPSHOT.jar
 
 # Read the swagger api document in the browser
-$ link:localhost:8090/swagger-ui/index.html
+$ link:localhost:80/swagger-ui/index.html
 
 # check the database in the browser
-$ link:localhost:8090/db-console
+$ link:localhost:80/db-console
 /**
 console information:
 Diver class:org.h2.Driver

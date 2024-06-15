@@ -10,23 +10,23 @@ To clone and run this application, you'll need [Git](https://git-scm.com/downloa
 
 ```
 # Clone this repository
-$ git clone https://github.com/Reene444/AlbumSystem.git
+$ git clone https://github.com/Reene444/InstaCut.git
  
 # Go into the repository
-$ cd AlbumSystem
+$ cd backend_apis
 
 # Install dependencies
 $ mvn clean package
 
 # Run the app
-$ java -jar target/album-system-api-0.0.1-SNAPSHOT.jar
+$ java -jar target/backend_apis-0.0.1-SNAPSHOT.jar
 
 # Read the swagger api document in the browser
-$ link:localhost:8082/swagger-ui/index.html
+$ link:localhost:80/swagger-ui/index.html
 ```
 ## :link: Demo
 
-[//]: # (- <a target="_blank" href="http://www.jmx.org.uk:8080/"> Click Here </a> to see and play by yourself .)
+[//]: # (- <a target="_blank" href="http://www.jmx.org.uk:80/"> Click Here </a> to see and play by yourself .)
 
 ## :mailbox: Contact
 - <a target="_blank" href="mailto:reene44444@gmail.com">E-mail</a>
