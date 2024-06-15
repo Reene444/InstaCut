@@ -30,7 +30,7 @@ import java.util.Optional;
 @RequestMapping("/api/v1/auth")
 @Tag(name = "Auth Controller", description = "Controller for Account management")
 @Slf4j
-@CrossOrigin(origins = "http://localhost:3000,maxAge=3600")
+@CrossOrigin(origins = {"http://localhost:80","http://localhost:3000","http://34.71.165.227:80","http://34.71.165.227:3000"},maxAge=3600)
 public class AuthController {
 
     @Autowired

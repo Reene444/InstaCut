@@ -62,7 +62,8 @@ yarn start
 
 ## Documentation
 
-[Mantis documentation](https://codedthemes.gitbook.io/mantis/) helps you out in all aspects from Installation to deployment.
+if set frontend with backend in the same server, the package.json need to modify: 
+` "proxy" : "http://localhost:8090",`
 
 ## Technology stack
 
