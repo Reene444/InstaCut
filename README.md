@@ -61,6 +61,6 @@ $ npm start
 
 ## Apis:
 
-## Page 
+## Page Link
  :dash: [Demo](http://instacut.org/)
 
