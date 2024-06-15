@@ -54,8 +54,11 @@ $ npm start
 |-----|-------------|----------------|----------------------------------------------------------------|
 | 1   | USER        | user@user.com  | $2a$10$4SQYLUdYdOd6rzpcxXc3peIJrc4EBtDTkCCSDKobZN.NFalfQr7UK    |
 | 2   | ADMIN USER  | admin@admin.com| $2a$10$od7JtORsFWmY8XqrnI.PxOYPeqbJpxn3xMPtNez/f0cQvPBbaZ8ke   |
+
 (the password is encripted by RSA)
+
 ![img.png](img.png)
+
 ## Apis:
 
 ## Page 
