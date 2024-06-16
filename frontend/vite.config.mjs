@@ -10,6 +10,9 @@ import jsconfigPaths from 'vite-jsconfig-paths';
 export default defineConfig({
   plugins: [react(), jsconfigPaths()
   ],
+  optimizeDeps: {
+    include: ['@ffmpeg/ffmpeg', '@ffmpeg/util'],
+  },
   // https://github.com/jpuri/react-draft-wysiwyg/issues/1317
   base: '/', // accessing env variable is not possible here. So hard coding this.
   define: {
@@ -33,12 +36,12 @@ export default defineConfig({
     // this sets a default port to 3000
     port: 80,
     host: true,
-    // proxy: {
-    //   '/api': {
-    //     target: 'http://localhost:8090',
-    //     changeOrigin: true
-    //   }
-    // }
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8095',//http://35.224.213.216:8080/
+        changeOrigin: true
+      }
+    }
   },
   preview: {
     // this ensures that the browser opens upon preview start

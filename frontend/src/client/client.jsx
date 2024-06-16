@@ -1,8 +1,8 @@
 import axios from 'axios';
-// import process from 'eslint-config-react-app/base.js';
 
 
-const API_VERSION="http://35.224.213.216:8080/api/v1"
+// const API_VERSION="http://35.224.213.216:8080/api/v1"
+const API_VERSION="http://localhost:8095/api/v1"
 
 const  fetchGetData=(uri)=>{
   const url = `${API_VERSION}${uri}`;

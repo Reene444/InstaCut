@@ -9,7 +9,7 @@ WORKDIR /frontend
 # Copy package.json and package-lock.json to the working directory
 COPY src/ /frontend/src
 COPY package*.json /frontend/
-COPY . ./
+COPY . ./w
 # Install project dependencies
 # Update npm and clear cache before installing
 RUN npm install -g npm@latest && npm cache clean --force

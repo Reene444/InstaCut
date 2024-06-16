@@ -24,6 +24,8 @@
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
     "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
+    "@ffmpeg/ffmpeg": "^0.12.10",
+    "@ffmpeg/util": "^0.12.1",
     "@fontsource/inter": "^5.0.17",
     "@fontsource/poppins": "^5.0.12",
     "@fontsource/public-sans": "^5.0.17",

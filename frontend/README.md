@@ -63,7 +63,7 @@ yarn start
 ## Documentation
 
 if set frontend with backend in the same server, the package.json need to modify: 
-` "proxy" : "http://localhost:8090",`
+` "proxy" : "http://localhost:8080",`
 
 ## Technology stack
 
