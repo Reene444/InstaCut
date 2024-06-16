@@ -45,7 +45,7 @@
 ```
 git clone https://github.com/Reene444/InstaCut.git
 cd frontend
-//tips: port:3000
+//tips: port:80
 ```
 
 2. Install packages

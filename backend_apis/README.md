@@ -22,7 +22,7 @@ $ mvn clean package
 $ java -jar target/backend_apis-0.0.1-SNAPSHOT.jar
 
 # Read the swagger api document in the browser
-$ link:localhost:80/swagger-ui/index.html
+$ link:localhost:8080/swagger-ui/index.html
 ```
 ## :link: Demo
 
