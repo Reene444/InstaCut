@@ -59,8 +59,8 @@ $ npm start
 
 ![img.png](img.png)
 
-## Apis:
-
+## Apis
+Updating...
 ## Page Link
  :dash: [Demo](http://instacut.org/)
-
+### Process

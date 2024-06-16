@@ -39,7 +39,7 @@ import java.util.*;
 @RequestMapping("/api/v1")
 @Tag(name = "Albumm Controller", description = "Controller for album and photo management")
 @Slf4j
-@CrossOrigin(origins = {"http://localhost:80","http://localhost:3000","http://34.71.165.227:80","http://34.71.165.227:3000"},maxAge=3600)
+@CrossOrigin(origins = {"*"},maxAge=3600)
 public class AlbumController {
 
     static final String PHOTOS_FOLDER_NAME="photos";

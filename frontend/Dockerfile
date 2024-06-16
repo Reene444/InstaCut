@@ -7,7 +7,6 @@ FROM --platform=linux/amd64 node:18-alpine
 WORKDIR /frontend
 
 # Copy package.json and package-lock.json to the working directory
-COPY dist/ /frontend/dist
 COPY src/ /frontend/src
 COPY package*.json /frontend/
 COPY . ./

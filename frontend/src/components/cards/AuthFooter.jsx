@@ -27,26 +27,6 @@ export default function AuthFooter() {
             variant="subtitle2"
             color="secondary"
             component={Link}
-            href="https://codedthemes.com"
-            target="_blank"
-            underline="hover"
-          >
-            Terms and Conditions
-          </Typography>
-          <Typography
-            variant="subtitle2"
-            color="secondary"
-            component={Link}
-            href="https://codedthemes.com"
-            target="_blank"
-            underline="hover"
-          >
-            Privacy Policy
-          </Typography>
-          <Typography
-            variant="subtitle2"
-            color="secondary"
-            component={Link}
             href="/about"
             target="_blank"
             underline="hover"

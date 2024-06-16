@@ -75,4 +75,9 @@ if set frontend with backend in the same server, the package.json need to modify
 - Code splitting.
 - CSS-in-JS.
 
+## Deploy
+[docker repostory:insta_cut](https://hub.docker.com/repository/docker/reene44444/insta_cut/general)
 
+last tag:
+frontend_test_v[verion:11]
+frontend_test_v[verion:11+]_no_proxy[verion:4+]
