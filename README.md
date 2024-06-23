@@ -21,10 +21,10 @@ $ mvn clean package
 $ java -jar target/backend_apis-0.0.1-SNAPSHOT.jar
 
 # Read the swagger api document in the browser
-$ link:localhost:8090/swagger-ui/index.html
+$ link:localhost:8095/swagger-ui/index.html
 
 # check the database in the browser
-$ link:localhost:8090/db-console
+$ link:localhost:8095/db-console
 /**
 console information:
 Diver class:org.h2.Driver
@@ -55,12 +55,12 @@ $ npm start
 | 1   | USER        | user@user.com  | $2a$10$4SQYLUdYdOd6rzpcxXc3peIJrc4EBtDTkCCSDKobZN.NFalfQr7UK    |
 | 2   | ADMIN USER  | admin@admin.com| $2a$10$od7JtORsFWmY8XqrnI.PxOYPeqbJpxn3xMPtNez/f0cQvPBbaZ8ke   |
 
-(the password is encripted by RSA)
+(the password ["pass987" for user@user.com and admin@admin.com] is encripted by RSA)
 
 ![img.png](img.png)
 
 ## Apis
 Updating...
 ## Page Link
- :dash: [Demo](http://34.71.165.227/)
+ :dash: [Demo](https://instacut.org/)
 ### Process

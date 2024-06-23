@@ -9,3 +9,12 @@
 2.deploy:
 - frontend : url:80
 - backend  : url:8080 
+
+3. reference apis:
+
+- (Video-React)video display commponents: 
+  - https://video-react.js.org/ ;
+  - https://www.npmjs.com/package/@moviemasher/client-react
+  - https://developers.facebook.com/docs/instagram-api/guides/content-publishing
+  - https://img.ly/docs/pesdk/web/guides/react-js/
+- public video test : https://gist.github.com/jsturgis/3b19447b304616f18657

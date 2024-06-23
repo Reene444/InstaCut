@@ -5,6 +5,9 @@ import { useEffect } from 'react';
 import {fetchGetDataWithAuth} from 'client/client.jsx';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import VideoEditor from './VideoEditor.jsx';
+import VideoShow from './VideoShow.jsx';
+
 
 const brightPopColors = [
   '#FF3E4D', '#FF5635', '#FFAB00', '#36B37E', '#00B8D9', '#0052CC', '#253858', '#0067B1',
@@ -64,7 +67,11 @@ const AlbumDynamicGridPage = () => {
           </Link>
         </Grid>
       ))}
+      <br/>
+      <VideoEditor />
+      {/*<VideoShow />*/}
     </Grid>
+
   );
 };
 

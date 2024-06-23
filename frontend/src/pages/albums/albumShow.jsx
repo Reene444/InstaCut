@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './albums/header.jsx';
 import PhotoGrid from './albums/photoGrid.jsx';
 import VideoEditor from './VideoEditor.jsx';
+import VideoShow from './VideoShow.jsx';
 
 
 const Albums = () => {
@@ -12,7 +13,7 @@ const Albums = () => {
       <div style={{ marginTop: '20px', padding: '20px' }}>
 
        <PhotoGrid />
-        <VideoEditor />
+        <VideoShow />
       </div>
     </div>
   );

@@ -28,3 +28,41 @@
     <script type="module" src="/src/index.jsx"></script>
   </body>
 </html>
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--  <title>Bluetooth Serial Communication</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>Bluetooth Serial Communication</h1>-->
+<!--<button id="connect">Connect to Bluetooth</button>-->
+<!--<script>-->
+<!--  document.getElementById('connect').addEventListener('click', async () => {-->
+<!--    try {-->
+<!--      // 请求蓝牙端口-->
+<!--      const port = await navigator.serial.requestPort({-->
+<!--        filters: [{ bluetoothServiceClassId: '00001101-0000-1000-8000-00805f9b34fb' }]-->
+<!--      });-->
+
+<!--      // 打开端口-->
+<!--      await port.open({ baudRate: 9600 });-->
+
+<!--      // 获取写入器并发送数据-->
+<!--      const writer = port.writable.getWriter();-->
+<!--      const data = new TextEncoder().encode('Hello Bluetooth!');-->
+<!--      await writer.write(data);-->
+<!--      writer.releaseLock();-->
+
+<!--      alert('Data sent successfully!');-->
+<!--    } catch (error) {-->
+<!--      console.error('There was an error:', error);-->
+<!--      alert('Failed to connect or send data');-->
+<!--    }-->
+<!--  });-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
