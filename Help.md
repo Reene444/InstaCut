@@ -9,7 +9,7 @@
 2.deploy:
 - frontend : url:80
 - backend  : url:8080 
-
+- github actions for yaml format:https://jsonformatter.org/yaml-formatter
 3. reference apis:
 
 - (Video-React)video display commponents: 
