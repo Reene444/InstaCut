@@ -62,5 +62,5 @@ $ npm start
 ## Apis
 Updating...
 ## Page Link
- :dash: [Demo](https://instacut.org/)
+ :dash: [Demo](http://34.71.165.227/)
 ### Process
