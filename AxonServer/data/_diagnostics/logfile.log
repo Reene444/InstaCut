@@ -1,0 +1,223 @@
+2024-06-26 01:35:00.735 |  WARN |                      main | ConfigServletWebServerApplicationContext | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'MessagingClusterServer'; nested exception is io.axoniq.axonserver.exception.FailedToStartException: [AXONIQ-0001] Starting Axon Server Cluster Server failed 
+2024-06-26 01:35:01.177 | ERROR |                      main | o.s.boot.SpringApplication               | Application run failed
+java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.bind(Net.java:555) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294) ~[na:na]
+	at io.grpc.netty.shaded.io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:141) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:562) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1334) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:600) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:579) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:973) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannel.bind(AbstractChannel.java:260) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:356) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Wrapped by: java.io.IOException: Failed to bind to address 0.0.0.0/0.0.0.0:8224
+	at io.grpc.netty.shaded.io.grpc.netty.NettyServer.start(NettyServer.java:333) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.internal.ServerImpl.start(ServerImpl.java:185) ~[grpc-core-1.59.1.jar!/:1.59.1]
+	at io.grpc.internal.ServerImpl.start(ServerImpl.java:94) ~[grpc-core-1.59.1.jar!/:1.59.1]
+	at io.axoniq.axonserver.enterprise.cluster.internal.MessagingClusterServer.start(dba:58) ~[classes!/:na]
+	... 23 common frames omitted
+Wrapped by: io.axoniq.axonserver.exception.FailedToStartException: [AXONIQ-0001] Starting Axon Server Cluster Server failed 
+	at io.axoniq.axonserver.enterprise.cluster.internal.MessagingClusterServer.start(dba:19) ~[classes!/:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:179) ~[spring-context-5.3.31.jar!/:5.3.31]
+	... 22 common frames omitted
+Wrapped by: org.springframework.context.ApplicationContextException: Failed to start bean 'MessagingClusterServer'; nested exception is io.axoniq.axonserver.exception.FailedToStartException: [AXONIQ-0001] Starting Axon Server Cluster Server failed 
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182) ~[spring-context-5.3.31.jar!/:5.3.31]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54) ~[spring-context-5.3.31.jar!/:5.3.31]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:357) ~[spring-context-5.3.31.jar!/:5.3.31]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:156) ~[spring-context-5.3.31.jar!/:5.3.31]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:124) ~[spring-context-5.3.31.jar!/:5.3.31]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:946) ~[spring-context-5.3.31.jar!/:5.3.31]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:594) ~[spring-context-5.3.31.jar!/:5.3.31]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.18.jar!/:2.7.18]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.7.18.jar!/:2.7.18]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409) ~[spring-boot-2.7.18.jar!/:2.7.18]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.18.jar!/:2.7.18]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.7.18.jar!/:2.7.18]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289) ~[spring-boot-2.7.18.jar!/:2.7.18]
+	at io.axoniq.axonserver.AxonServer.main(o:176) ~[classes!/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[axonserver.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[axonserver.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[axonserver.jar:na]
+	at org.springframework.boot.loader.PropertiesLauncher.main(PropertiesLauncher.java:467) ~[axonserver.jar:na]
+2024-06-26 01:38:07.942 |  INFO |                      main | i.a.a.e.c.i.MessagingClusterServer       | Axon Server Cluster Server started on port: 8224 - no SSL
+2024-06-26 01:38:08.526 |  INFO |                      main | io.axoniq.axonserver.grpc.Gateway        | Axon Server Gateway started on port: 8124 - no SSL
+2024-06-26 01:38:08.584 |  INFO |                      main | o.s.b.w.embedded.tomcat.TomcatWebServer  | Tomcat started on port(s): 8024 (http) with context path ''
+2024-06-26 01:38:08.645 |  INFO |                      main | io.axoniq.axonserver.AxonServer          | Started AxonServer in 64.408 seconds (JVM running for 66.245)
+2024-06-26 01:38:13.701 |  INFO |      http-nio-8024-exec-2 | A.i.a.a.ui.ClusterUpdatesService         | [<anonymous>] Subscribed to context updates.
+2024-06-26 01:38:13.850 |  INFO |      http-nio-8024-exec-1 | i.a.a.a.c.r.ContextAdminRequestProcessor | [<anonymous>] Request to list contexts.
+2024-06-26 01:38:15.876 |  INFO |      http-nio-8024-exec-3 | i.a.a.a.c.r.ContextAdminRequestProcessor | [<anonymous>] Request to initialize cluster [default].
+2024-06-26 01:38:15.985 |  INFO |      http-nio-8024-exec-3 | i.a.a.c.r.file.PrimaryLogEntryStore      | _admin: Initializing log
+2024-06-26 01:38:15.991 |  INFO |      http-nio-8024-exec-3 | i.a.a.c.r.file.PrimaryLogEntryStore      | _admin: File for segment 1 does not exist. Creating new file with size of 16777216.
+2024-06-26 01:38:16.054 |  INFO |      http-nio-8024-exec-3 | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 0: Updating state from null to IdleState (Node initialized.)
+2024-06-26 01:38:16.172 |  INFO |      http-nio-8024-exec-3 | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 0: Starting the node...
+2024-06-26 01:38:16.180 |  INFO |      http-nio-8024-exec-3 | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 0: Updating state from IdleState to FollowerState (Role PRIMARY)
+2024-06-26 01:38:16.187 |  INFO |      http-nio-8024-exec-3 | io.axoniq.axonserver.cluster.RaftNode    | The replication log compaction for "_admin" is scheduled each 1 hour(s).
+2024-06-26 01:38:16.196 |  INFO |      http-nio-8024-exec-3 | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 0: Node started.
+2024-06-26 01:38:17.642 |  INFO |        _admin-raftState-1 | i.a.axonserver.cluster.FollowerState     | _admin in term 0: Timeout in follower state: 1460 ms.
+2024-06-26 01:38:17.703 |  INFO |        _admin-raftState-1 | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 0: Updating state from FollowerState to PreVoteState (_admin in term 0: Timeout in follower state: 1460 ms.)
+2024-06-26 01:38:17.735 |  INFO |        _admin-raftState-1 | i.a.a.cluster.election.DefaultPreVote    | _admin: Starting pre-vote from OwdeMacBook-Pro-3ef14dd6-2971-43d7-8080-be2bd10394e8 in term 0
+2024-06-26 01:38:17.738 |  INFO |        _admin-raftState-1 | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 0: Updating state from PreVoteState to CandidateState (_admin: Election for term 1 is won by OwdeMacBook-Pro-3ef14dd6-2971-43d7-8080-be2bd10394e8 (PrimaryAndVotingMajorityStrategy {votes={OwdeMacBook-Pro-3ef14dd6-2971-43d7-8080-be2bd10394e8=true}}))
+2024-06-26 01:38:17.747 |  INFO |        _admin-raftState-1 | i.a.a.logging.ClusterEventsLogger        | _admin in term 0: Leader is null
+2024-06-26 01:38:17.794 |  INFO |        _admin-raftState-1 | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 1: Term updated (OwdeMacBook-Pro-3ef14dd6-2971-43d7-8080-be2bd10394e8 is starting a new election, so increases its term from 0 to 1).
+2024-06-26 01:38:17.794 |  INFO |        _admin-raftState-1 | i.a.a.cluster.election.DefaultElection   | _admin: Starting election from OwdeMacBook-Pro-3ef14dd6-2971-43d7-8080-be2bd10394e8 in term 1
+2024-06-26 01:38:17.795 |  INFO |      http-nio-8024-exec-9 | i.a.a.a.c.r.ContextAdminRequestProcessor | [<anonymous>] Request to list contexts.
+2024-06-26 01:38:17.801 |  INFO |        _admin-raftState-1 | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 1: Updating state from CandidateState to LeaderState (_admin: Election for term 1 is won by OwdeMacBook-Pro-3ef14dd6-2971-43d7-8080-be2bd10394e8 (PrimaryAndVotingMajorityStrategy {votes={OwdeMacBook-Pro-3ef14dd6-2971-43d7-8080-be2bd10394e8=true}}))
+2024-06-26 01:38:17.912 |  INFO |        _admin-raftState-1 | i.a.a.logging.ClusterEventsLogger        | _admin in term 1: (notification) Leader is OwdeMacBook-Pro
+2024-06-26 01:38:17.921 |  INFO |        _admin-raftState-1 | i.a.a.logging.ClusterEventsLogger        | _admin in term 1: Leader
+2024-06-26 01:38:17.924 |  INFO |        _admin-raftState-1 | i.axoniq.axonserver.cluster.LeaderState  | _admin in term 1: Start replication thread for 0 peers.
+2024-06-26 01:38:17.924 |  INFO |        _admin-raftState-1 | i.axoniq.axonserver.cluster.LeaderState  | _admin in term 1: Appending info that leader has been elected.
+2024-06-26 01:38:17.936 |  INFO |      http-nio-8024-exec-1 | i.a.a.a.c.r.ContextAdminRequestProcessor | [<anonymous>] Request to list contexts.
+2024-06-26 01:38:18.265 |  INFO |         _admin-raftNode-0 | i.a.a.logging.ClusterEventsLogger        | _admin: context _admin created, my role PRIMARY, min event token 0, min snapshot token 0
+2024-06-26 01:38:18.351 |  INFO |      http-nio-8024-exec-3 | i.a.a.c.r.file.PrimaryLogEntryStore      | default: Initializing log
+2024-06-26 01:38:18.353 |  INFO |      http-nio-8024-exec-3 | i.a.a.c.r.file.PrimaryLogEntryStore      | default: File for segment 1 does not exist. Creating new file with size of 16777216.
+2024-06-26 01:38:18.362 |  INFO |      http-nio-8024-exec-3 | io.axoniq.axonserver.cluster.RaftNode    | default in term 0: Updating state from null to IdleState (Node initialized.)
+2024-06-26 01:38:18.363 |  INFO |      http-nio-8024-exec-7 | i.a.a.a.c.r.ContextAdminRequestProcessor | [<anonymous>] Request to list contexts.
+2024-06-26 01:38:18.378 |  INFO |           task-scheduler2 | io.axoniq.axonserver.cluster.RaftNode    | default in term 0: Starting the node...
+2024-06-26 01:38:18.379 |  INFO |           task-scheduler2 | io.axoniq.axonserver.cluster.RaftNode    | default in term 0: Updating state from IdleState to FollowerState (Role PRIMARY)
+2024-06-26 01:38:18.380 |  INFO |           task-scheduler2 | io.axoniq.axonserver.cluster.RaftNode    | The replication log compaction for "default" is scheduled each 1 hour(s).
+2024-06-26 01:38:18.380 |  INFO |           task-scheduler2 | io.axoniq.axonserver.cluster.RaftNode    | default in term 0: Node started.
+2024-06-26 01:38:19.846 |  INFO |       default-raftState-0 | i.a.axonserver.cluster.FollowerState     | default in term 0: Timeout in follower state: 1465 ms.
+2024-06-26 01:38:19.854 |  INFO |       default-raftState-0 | io.axoniq.axonserver.cluster.RaftNode    | default in term 0: Updating state from FollowerState to PreVoteState (default in term 0: Timeout in follower state: 1465 ms.)
+2024-06-26 01:38:19.891 |  INFO |       default-raftState-0 | i.a.a.cluster.election.DefaultPreVote    | default: Starting pre-vote from OwdeMacBook-Pro-9925fab4-69b3-407c-bae5-5647305e178d in term 0
+2024-06-26 01:38:19.892 |  INFO |       default-raftState-0 | io.axoniq.axonserver.cluster.RaftNode    | default in term 0: Updating state from PreVoteState to CandidateState (default: Election for term 1 is won by OwdeMacBook-Pro-9925fab4-69b3-407c-bae5-5647305e178d (PrimaryAndVotingMajorityStrategy {votes={OwdeMacBook-Pro-9925fab4-69b3-407c-bae5-5647305e178d=true}}))
+2024-06-26 01:38:19.894 |  INFO |       default-raftState-0 | i.a.a.logging.ClusterEventsLogger        | default in term 0: Leader is null
+2024-06-26 01:38:19.930 |  INFO |      http-nio-8024-exec-5 | i.a.a.a.c.r.ContextAdminRequestProcessor | [<anonymous>] Request to list contexts.
+2024-06-26 01:38:19.945 |  INFO |       default-raftState-0 | io.axoniq.axonserver.cluster.RaftNode    | default in term 1: Term updated (OwdeMacBook-Pro-9925fab4-69b3-407c-bae5-5647305e178d is starting a new election, so increases its term from 0 to 1).
+2024-06-26 01:38:19.946 |  INFO |       default-raftState-0 | i.a.a.cluster.election.DefaultElection   | default: Starting election from OwdeMacBook-Pro-9925fab4-69b3-407c-bae5-5647305e178d in term 1
+2024-06-26 01:38:19.947 |  INFO |       default-raftState-0 | io.axoniq.axonserver.cluster.RaftNode    | default in term 1: Updating state from CandidateState to LeaderState (default: Election for term 1 is won by OwdeMacBook-Pro-9925fab4-69b3-407c-bae5-5647305e178d (PrimaryAndVotingMajorityStrategy {votes={OwdeMacBook-Pro-9925fab4-69b3-407c-bae5-5647305e178d=true}}))
+2024-06-26 01:38:19.978 |  INFO |       default-raftState-0 | i.a.a.logging.ClusterEventsLogger        | default in term 1: (notification) Leader is OwdeMacBook-Pro
+2024-06-26 01:38:19.982 |  INFO |       default-raftState-0 | i.a.a.logging.ClusterEventsLogger        | default in term 1: Leader
+2024-06-26 01:38:19.984 |  INFO |       default-raftState-0 | i.axoniq.axonserver.cluster.LeaderState  | default in term 1: Start replication thread for 0 peers.
+2024-06-26 01:38:19.985 |  INFO |       default-raftState-0 | i.axoniq.axonserver.cluster.LeaderState  | default in term 1: Appending info that leader has been elected.
+2024-06-26 01:38:20.004 |  INFO |     http-nio-8024-exec-10 | i.a.a.a.c.r.ContextAdminRequestProcessor | [<anonymous>] Request to list contexts.
+2024-06-26 01:38:21.104 |  INFO |        default-raftNode-0 | i.a.a.logging.ClusterEventsLogger        | default: context default created, my role PRIMARY, min event token 0, min snapshot token 0
+2024-06-26 01:38:21.167 |  INFO |      http-nio-8024-exec-2 | i.a.a.a.c.r.ContextAdminRequestProcessor | [<anonymous>] Request to list contexts.
+2024-06-26 01:53:10.166 |  INFO |      http-nio-8024-exec-6 | A.i.a.a.ui.ClusterUpdatesService         | [<anonymous>] Subscribed to context updates.
+2024-06-26 01:53:10.322 |  INFO |      http-nio-8024-exec-5 | i.a.a.a.c.r.ContextAdminRequestProcessor | [<anonymous>] Request to list contexts.
+2024-06-26 01:53:58.288 |  WARN |                      main | ConfigServletWebServerApplicationContext | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'MessagingClusterServer'; nested exception is io.axoniq.axonserver.exception.FailedToStartException: [AXONIQ-0001] Starting Axon Server Cluster Server failed 
+2024-06-26 01:53:58.655 | ERROR |                      main | o.s.boot.SpringApplication               | Application run failed
+java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.bind(Net.java:555) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294) ~[na:na]
+	at io.grpc.netty.shaded.io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:141) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:562) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1334) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:600) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:579) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:973) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannel.bind(AbstractChannel.java:260) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:356) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Wrapped by: java.io.IOException: Failed to bind to address 0.0.0.0/0.0.0.0:8224
+	at io.grpc.netty.shaded.io.grpc.netty.NettyServer.start(NettyServer.java:333) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.internal.ServerImpl.start(ServerImpl.java:185) ~[grpc-core-1.59.1.jar!/:1.59.1]
+	at io.grpc.internal.ServerImpl.start(ServerImpl.java:94) ~[grpc-core-1.59.1.jar!/:1.59.1]
+	at io.axoniq.axonserver.enterprise.cluster.internal.MessagingClusterServer.start(dba:58) ~[classes!/:na]
+	... 23 common frames omitted
+Wrapped by: io.axoniq.axonserver.exception.FailedToStartException: [AXONIQ-0001] Starting Axon Server Cluster Server failed 
+	at io.axoniq.axonserver.enterprise.cluster.internal.MessagingClusterServer.start(dba:19) ~[classes!/:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:179) ~[spring-context-5.3.31.jar!/:5.3.31]
+	... 22 common frames omitted
+Wrapped by: org.springframework.context.ApplicationContextException: Failed to start bean 'MessagingClusterServer'; nested exception is io.axoniq.axonserver.exception.FailedToStartException: [AXONIQ-0001] Starting Axon Server Cluster Server failed 
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182) ~[spring-context-5.3.31.jar!/:5.3.31]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54) ~[spring-context-5.3.31.jar!/:5.3.31]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:357) ~[spring-context-5.3.31.jar!/:5.3.31]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:156) ~[spring-context-5.3.31.jar!/:5.3.31]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:124) ~[spring-context-5.3.31.jar!/:5.3.31]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:946) ~[spring-context-5.3.31.jar!/:5.3.31]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:594) ~[spring-context-5.3.31.jar!/:5.3.31]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.18.jar!/:2.7.18]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.7.18.jar!/:2.7.18]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409) ~[spring-boot-2.7.18.jar!/:2.7.18]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.18.jar!/:2.7.18]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.7.18.jar!/:2.7.18]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289) ~[spring-boot-2.7.18.jar!/:2.7.18]
+	at io.axoniq.axonserver.AxonServer.main(o:176) ~[classes!/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[axonserver.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[axonserver.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[axonserver.jar:na]
+	at org.springframework.boot.loader.PropertiesLauncher.main(PropertiesLauncher.java:467) ~[axonserver.jar:na]
+2024-06-26 02:06:39.030 |  WARN |                      main | ConfigServletWebServerApplicationContext | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'MessagingClusterServer'; nested exception is io.axoniq.axonserver.exception.FailedToStartException: [AXONIQ-0001] Starting Axon Server Cluster Server failed 
+2024-06-26 02:06:39.392 | ERROR |                      main | o.s.boot.SpringApplication               | Application run failed
+java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.bind(Net.java:555) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294) ~[na:na]
+	at io.grpc.netty.shaded.io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:141) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:562) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1334) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:600) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:579) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:973) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannel.bind(AbstractChannel.java:260) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:356) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Wrapped by: java.io.IOException: Failed to bind to address 0.0.0.0/0.0.0.0:8224
+	at io.grpc.netty.shaded.io.grpc.netty.NettyServer.start(NettyServer.java:333) ~[grpc-netty-shaded-1.59.1.jar!/:1.59.1]
+	at io.grpc.internal.ServerImpl.start(ServerImpl.java:185) ~[grpc-core-1.59.1.jar!/:1.59.1]
+	at io.grpc.internal.ServerImpl.start(ServerImpl.java:94) ~[grpc-core-1.59.1.jar!/:1.59.1]
+	at io.axoniq.axonserver.enterprise.cluster.internal.MessagingClusterServer.start(dba:58) ~[classes!/:na]
+	... 23 common frames omitted
+Wrapped by: io.axoniq.axonserver.exception.FailedToStartException: [AXONIQ-0001] Starting Axon Server Cluster Server failed 
+	at io.axoniq.axonserver.enterprise.cluster.internal.MessagingClusterServer.start(dba:19) ~[classes!/:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:179) ~[spring-context-5.3.31.jar!/:5.3.31]
+	... 22 common frames omitted
+Wrapped by: org.springframework.context.ApplicationContextException: Failed to start bean 'MessagingClusterServer'; nested exception is io.axoniq.axonserver.exception.FailedToStartException: [AXONIQ-0001] Starting Axon Server Cluster Server failed 
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182) ~[spring-context-5.3.31.jar!/:5.3.31]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54) ~[spring-context-5.3.31.jar!/:5.3.31]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:357) ~[spring-context-5.3.31.jar!/:5.3.31]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:156) ~[spring-context-5.3.31.jar!/:5.3.31]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:124) ~[spring-context-5.3.31.jar!/:5.3.31]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:946) ~[spring-context-5.3.31.jar!/:5.3.31]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:594) ~[spring-context-5.3.31.jar!/:5.3.31]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.18.jar!/:2.7.18]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.7.18.jar!/:2.7.18]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409) ~[spring-boot-2.7.18.jar!/:2.7.18]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.18.jar!/:2.7.18]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.7.18.jar!/:2.7.18]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289) ~[spring-boot-2.7.18.jar!/:2.7.18]
+	at io.axoniq.axonserver.AxonServer.main(o:176) ~[classes!/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[axonserver.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[axonserver.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[axonserver.jar:na]
+	at org.springframework.boot.loader.PropertiesLauncher.main(PropertiesLauncher.java:467) ~[axonserver.jar:na]
