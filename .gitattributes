@@ -1,0 +1,4 @@
+*.jar filter=lfs diff=lfs merge=lfs -text
+AxonServer/* filter=lfs diff=lfs merge=lfs -text
+AxonServer/*.jar filter=lfs diff=lfs merge=lfs -text
+AxonServer/extensions/*.zip filter=lfs diff=lfs merge=lfs -text
