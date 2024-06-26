@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### AxonServer ###
+AxonServer-2024.0.3/

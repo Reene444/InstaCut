@@ -3,9 +3,8 @@
 1.local dev:
 - frontend :localhost:80
 - backend  :localhost:8095
-
+- git: git install lfs (use git large file storage)
 [3 places for ports (client.jsx and vite.config.mjs(proxy) in frontend,application.roperties in backend) need to modify when deploy to cloud ]
-
 2.deploy:
 - frontend : url:80
 - backend  : url:8080 

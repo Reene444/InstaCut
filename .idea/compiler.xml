@@ -12,6 +12,7 @@
         <module name="DiscoveryServer" />
         <module name="ApiGateway" />
         <module name="backend_apis" />
+        <module name="OrdersService" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -23,6 +24,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="ApiGateway" options="-parameters" />
       <module name="DiscoveryServer" options="-parameters" />
+      <module name="OrdersService" options="-parameters" />
       <module name="ProductSystem" options="-parameters" />
       <module name="VideoSystem" options="-parameters" />
       <module name="backend_apis" options="-parameters" />

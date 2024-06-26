@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="AxonServer">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/AxonServer" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/AxonServer" recursive="false" />
+  </library>
+</component>

@@ -221,3 +221,19 @@ Wrapped by: org.springframework.context.ApplicationContextException: Failed to s
 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[axonserver.jar:na]
 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[axonserver.jar:na]
 	at org.springframework.boot.loader.PropertiesLauncher.main(PropertiesLauncher.java:467) ~[axonserver.jar:na]
+2024-06-26 03:28:48.580 |  INFO | ngApplicationShutdownHook | io.axoniq.axonserver.grpc.Gateway        | Axon Server Gateway stopped
+2024-06-26 03:28:48.584 |  INFO | ngApplicationShutdownHook | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 1: Stopping the node...
+2024-06-26 03:28:48.587 |  INFO | ngApplicationShutdownHook | i.axoniq.axonserver.cluster.LeaderState  | _admin in term 1: Stop replication thread
+2024-06-26 03:28:48.588 |  INFO | ngApplicationShutdownHook | i.axoniq.axonserver.cluster.LeaderState  | _admin in term 1: last applied: 6
+2024-06-26 03:28:48.589 |  INFO | ngApplicationShutdownHook | i.axoniq.axonserver.cluster.LeaderState  | _admin in term 1: OwdeMacBook-Pro-3ef14dd6-2971-43d7-8080-be2bd10394e8 steps down from Leader role.
+2024-06-26 03:28:48.589 |  INFO | ngApplicationShutdownHook | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 1: Updating state from LeaderState to IdleState (Node stopped)
+2024-06-26 03:28:48.592 |  INFO | ngApplicationShutdownHook | i.a.a.logging.ClusterEventsLogger        | _admin: No longer leader
+2024-06-26 03:28:48.623 |  INFO | ngApplicationShutdownHook | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 1: Node stopped.
+2024-06-26 03:28:48.623 |  INFO | ngApplicationShutdownHook | io.axoniq.axonserver.cluster.RaftNode    | default in term 1: Stopping the node...
+2024-06-26 03:28:48.623 |  INFO | ngApplicationShutdownHook | i.axoniq.axonserver.cluster.LeaderState  | default in term 1: Stop replication thread
+2024-06-26 03:28:48.624 |  INFO | ngApplicationShutdownHook | i.axoniq.axonserver.cluster.LeaderState  | default in term 1: last applied: 2
+2024-06-26 03:28:48.624 |  INFO | ngApplicationShutdownHook | i.axoniq.axonserver.cluster.LeaderState  | default in term 1: OwdeMacBook-Pro-9925fab4-69b3-407c-bae5-5647305e178d steps down from Leader role.
+2024-06-26 03:28:48.624 |  INFO | ngApplicationShutdownHook | io.axoniq.axonserver.cluster.RaftNode    | default in term 1: Updating state from LeaderState to IdleState (Node stopped)
+2024-06-26 03:28:48.624 |  INFO | ngApplicationShutdownHook | i.a.a.logging.ClusterEventsLogger        | default: No longer leader
+2024-06-26 03:28:48.630 |  INFO | ngApplicationShutdownHook | io.axoniq.axonserver.cluster.RaftNode    | default in term 1: Node stopped.
+2024-06-26 03:28:48.641 |  INFO | ngApplicationShutdownHook | i.a.a.e.c.i.MessagingClusterServer       | Axon Server Cluster Server stopped
